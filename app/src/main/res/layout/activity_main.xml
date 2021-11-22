@@ -27,12 +27,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:background="@null"
         android:ems="10"
         android:hint="Write something..."
         android:inputType="textPersonName"
         android:textAlignment="center"
         android:textColor="#000"
+        android:background="@null"
         android:textSize="30sp"
         android:layout_above="@id/button"/>
 
@@ -40,11 +40,14 @@
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Push"
+        android:text="Submit"
+        android:backgroundTint="#258374"
+        android:textColor="@color/white"
         android:layout_margin="15dp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:textSize="20sp"
+        android:padding="10dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>

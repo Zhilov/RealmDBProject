@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 import io.realm.Realm
 import io.realm.RealmConfiguration
 import io.realm.internal.async.RealmThreadPoolExecutor
+import java.util.*
+import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity() {
 
@@ -43,10 +45,10 @@ class MainActivity : AppCompatActivity() {
             if (!editT.text.isEmpty()) {
                 Realm.getInstance(config).executeTransaction() { realmTransaction ->
                     val task = Task(
-                        date_start = "1",
-                        date_finish = "2",
+                        date_start = Calendar.getInstance().time.toString(),
+                        date_finish = Calendar.getInstance().time.toString(),
                         name = editT.text.toString(),
-                        description = "This is first"
+                        description = "Some info..."
                     )
                     realmTransaction.insert(task)
                 }

@@ -1,35 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:background="#ccc"
-    android:layout_margin="15dp"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="#ccc">
 
     <TextView
         android:id="@+id/text_name"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginTop="15dp"
+        android:layout_alignParentTop="true"
         android:layout_marginLeft="15dp"
-        android:textSize="30sp"
-        android:textColor="@color/black"
+        android:layout_marginTop="15dp"
+        android:layout_toLeftOf="@id/image_delete"
+        android:fontFamily="sans-serif-medium"
         android:text="Example Name"
-        android:fontFamily="sans-serif-medium"/>
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/image_delete"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/ic_baseline_delete_24" />
 
     <TextView
         android:id="@+id/text_desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_below="@id/text_name"
-        android:layout_marginTop="20dp"
+        android:layout_alignParentLeft="true"
         android:layout_marginLeft="15dp"
-        android:textSize="15sp"
-        android:layout_marginBottom="15dp"
-        android:textColor="#555"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-medium"
         android:text="Writing example descriptions is a usual habit for me. It is useful for the XML file"
-        android:fontFamily="sans-serif-medium"/>
+        android:textColor="#555"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/date_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_desc"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="15.10.2021"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/date_finish"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_desc"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="16.10.2021"
+        android:textSize="15sp" />
+
 
 </RelativeLayout>
